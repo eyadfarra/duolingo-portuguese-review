@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>مراجعة كلمات البرتغالية</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#131f24">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="كلمات">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2358cc02'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EPT%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- HOME / LEVEL PICKER -->
+  <section id="home" class="screen active">
+    <header class="top">
+      <h1>كلمات البرتغالية</h1>
+      <button class="icon-btn" id="btnSettings" aria-label="الإعدادات">⚙</button>
+    </header>
+
+    <p class="hint">إلى أي درس وصلت؟ سأعرض لك كلمات من كل الدروس حتى الدرس المختار.</p>
+
+    <div class="picker">
+      <button class="step" id="lvPrev" aria-label="الدرس السابق">‹</button>
+      <div class="lv-box">
+        <span class="lv-label">الدرس</span>
+        <input id="lvNum" type="number" inputmode="numeric" min="1" max="311" value="1" aria-label="رقم الدرس">
+      </div>
+      <button class="step" id="lvNext" aria-label="الدرس التالي">›</button>
+    </div>
+    <input id="lvRange" class="range" type="range" min="1" max="311" value="1" dir="ltr" aria-label="اختر الدرس">
+
+    <div class="lesson-card">
+      <div class="lc-head">
+        <div>
+          <div class="lc-name" id="lcName" dir="ltr"></div>
+          <div class="lc-desc" id="lcDesc"></div>
+        </div>
+        <button class="link-btn" id="btnAll">كل الكلمات ›</button>
+      </div>
+      <div class="chips" id="lcChips"></div>
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <button class="cta" id="btnStart">ابدأ المراجعة</button>
+  </section>
+
+  <!-- PRACTICE -->
+  <section id="play" class="screen">
+    <header class="top play-top">
+      <button class="icon-btn" id="btnExit" aria-label="خروج">✕</button>
+      <div class="bar"><i id="barFill"></i></div>
+    </header>
+    <h2 class="q">اضغط على الأزواج المتطابقة</h2>
+    <div class="combo" id="combo"><span id="comboTxt">على التوالي x0</span><b class="bolt">✦</b></div>
+    <div class="board" id="board"></div>
+    <div class="foot-note" id="footNote"></div>
+  </section>
+
+  <!-- SHEETS -->
+  <div class="sheet-wrap" id="sheetWrap">
+    <div class="backdrop" id="backdrop"></div>
+    <div class="sheet" id="sheet"></div>
+  </div>
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "مراجعة كلمات البرتغالية",
+  "short_name": "كلمات",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#131f24",
+  "theme_color": "#131f24",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [{"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}
